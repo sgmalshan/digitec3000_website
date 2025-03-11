@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { Input } from "./input";
@@ -8,10 +8,29 @@ import { Label } from "./label";
 const email = `info@digitec3000.com`;
 
 export function ContactUsForm() {
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+
+    const subject = "Contact Us Form Submission";
+    const body = `First Name: ${formData.firstname}\nLast Name: ${formData.lastname}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
+
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
   };
+
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black shadow-md">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
@@ -32,20 +51,44 @@ export function ContactUsForm() {
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input
+              id="firstname"
+              placeholder="Tyler"
+              type="text"
+              value={formData.firstname}
+              onChange={handleChange}
+            />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Input
+              id="lastname"
+              placeholder="Durden"
+              type="text"
+              value={formData.lastname}
+              onChange={handleChange}
+            />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            placeholder="projectmayhem@fc.com"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="message">Message</Label>
-          <Input id="message" placeholder="Enter your message..." type="text" />
+          <Input
+            id="message"
+            placeholder="Enter your message..."
+            type="text"
+            value={formData.message}
+            onChange={handleChange}
+          />
         </LabelInputContainer>
 
         <button
