@@ -8,7 +8,7 @@ export function HeroScrollDemo() {
     <div className="flex flex-col overflow-hidden">
       <ContainerScroll>
         <Image
-          src={"/linear.webp"}
+          src={"./linear.webp"}
           alt="hero"
           height={720}
           width={1400}
