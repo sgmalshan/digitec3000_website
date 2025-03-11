@@ -63,14 +63,14 @@ export default function Footer() {
         </div>
 
         {/* Privacy Policy */}
-        <div className="mt-2">
+        {/* <div className="mt-2">
           <Link
             href="#"
             className="text-xs text-muted-foreground hover:text-primary"
           >
             Privacy Policy
           </Link>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
