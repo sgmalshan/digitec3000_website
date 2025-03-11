@@ -6,13 +6,13 @@ export function FloatingNavDemo() {
   const navItems = [
     {
       name: "Home",
-      link: "/home",
+      link: "/",
       icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
 
     {
       name: "FAQ",
-      link: "/home/#faq",
+      link: "#faq",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
   ];
