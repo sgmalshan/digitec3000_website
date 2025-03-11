@@ -43,7 +43,7 @@ export default function Footer() {
           <Link href="#" className="text-sm font-medium hover:text-primary">
             Mobile Solutions
           </Link> */}
-          <Link href="#" className="text-sm font-medium hover:text-primary">
+          {/* <Link href="#" className="text-sm font-medium hover:text-primary">
             About Us
           </Link>
           <Link
@@ -59,7 +59,7 @@ export default function Footer() {
           >
             <Linkedin className="h-4 w-4" /> LinkedIn{" "}
             <ArrowUpRight className="ml-1 h-3 w-3" />
-          </Link>
+          </Link> */}
         </div>
 
         {/* Privacy Policy */}
