@@ -24,9 +24,9 @@ export default function Footer() {
           <p className="text-muted-foreground mb-6">
             Driving global growth with innovative, scalable solutions.
           </p>
-          <Button className="bg-black text-white hover:bg-black/90 px-6">
+          {/* <Button className="bg-black text-white hover:bg-black/90 px-6">
             Get Started
-          </Button>
+          </Button> */}
         </div>
 
         {/* Navigation Links */}
