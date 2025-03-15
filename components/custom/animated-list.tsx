@@ -13,33 +13,67 @@ interface Item {
 
 let notifications = [
   {
-    name: "Payment received",
-    description: "Magic UI",
+    name: "Payment Successful",
+    description: "Your subscription is now active.",
     time: "15m ago",
-
-    icon: "💸",
+    icon: "💳",
     color: "#00C9A7",
   },
   {
-    name: "User signed up",
-    description: "Magic UI",
+    name: "New User Joined",
+    description: "A new member has signed up.",
     time: "10m ago",
     icon: "👤",
     color: "#FFB800",
   },
   {
-    name: "New message",
-    description: "Magic UI",
+    name: "Message Received",
+    description: "You have a new message.",
     time: "5m ago",
     icon: "💬",
     color: "#FF3D71",
   },
   {
-    name: "New event",
-    description: "Magic UI",
+    name: "System Update",
+    description: "Your app is now up to date.",
     time: "2m ago",
-    icon: "🗞️",
+    icon: "🔄",
     color: "#1E86FF",
+  },
+  {
+    name: "New Feature Released",
+    description: "Explore the latest updates in the app.",
+    time: "30m ago",
+    icon: "🚀",
+    color: "#FF5733",
+  },
+  {
+    name: "Friend Request",
+    description: "John Doe sent you a request.",
+    time: "20m ago",
+    icon: "🤝",
+    color: "#8E44AD",
+  },
+  {
+    name: "File Uploaded",
+    description: "Your document has been successfully uploaded.",
+    time: "8m ago",
+    icon: "📂",
+    color: "#27AE60",
+  },
+  {
+    name: "Meeting Reminder",
+    description: "Team meeting starts in 10 minutes.",
+    time: "5m ago",
+    icon: "📅",
+    color: "#F39C12",
+  },
+  {
+    name: "Achievement Unlocked",
+    description: "You've reached a new milestone!",
+    time: "1m ago",
+    icon: "🏆",
+    color: "#3498DB",
   },
 ];
 
