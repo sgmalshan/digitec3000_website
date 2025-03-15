@@ -9,6 +9,7 @@ import {
   IconEaseInOut,
   IconHeart,
   IconHelp,
+  IconManualGearbox,
   IconRouteAltLeft,
   IconTerminal2,
 } from "@tabler/icons-react";
@@ -41,9 +42,9 @@ export function FeaturesSection() {
       icon: <IconRouteAltLeft size={32} />,
     },
     {
-      title: "24/7 AI-Powered Support",
-      description: "Help is always available—anytime, anywhere.",
-      icon: <IconHelp size={32} />,
+      title: "Seamless Integration",
+      description: "Effortlessly connect with your favorite tools for a smooth workflow.",
+      icon: <IconManualGearbox size={32} />,
     },
     {
       title: "Reliability at its Core",
